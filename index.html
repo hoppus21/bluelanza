@@ -6,34 +6,68 @@
   <title>Blue Lanza – Chemická čistiareň</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ŠTÝLY PRE VYSKAKOVACÍ OBRÁZOK -->
+  <style>
+    #xmas-overlay {
+      position: fixed;
+      inset: 0; /* top:0; right:0; bottom:0; left:0; */
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      cursor: pointer;
+    }
+
+    #xmas-overlay .overlay-content {
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+
+    #xmas-overlay img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
 </head>
 <body>
-    <div class="top-news">
-        <div class="scrolling-text">
-          ⏰ <strong>Dočasná zmena otváracích hodín:</strong> 09:00 – 16:00
-          &nbsp;&nbsp;|&nbsp;&nbsp; 
-          📢 <strong>Zľava 20 %</strong> každý prvý pracovný piatok v mesiaci – tento mesiac: <strong>05.12.2025</strong>
-        </div>
+
+  <!-- VYSKAKOVACÍ OBRÁZOK S OTVÁRACÍMI HODINAMI -->
+  <div id="xmas-overlay">
+    <div class="overlay-content">
+      <img src="images/otvaracie-hodiny-vianoce.png" alt="Otváracie hodiny počas Vianoc">
     </div>
-</body>
-   
-    
-</div>
-      </div>
-    
-      <!-- Navigácia -->
-      <nav>
-        <div class="logo">Čistiareň Blue Lanza</div>
-        <div class="nav-links">
-          <a href="index.html">Hlavná stránka</a>
-          <a href="cennik.html">Cenník</a>
-          <a href="zlavy.html">Zľavy</a>
-          <a href="sluzby.html">Služby</a>
-          <a href="zaujimavosti.html">Zaujímavosti</a>
-          <a href="kontakt.html">Kontakt</a>
-        </div>
-      </nav>
-  
+  </div>
+
+  <!-- TOP NEWS PÁS -->
+  <div class="top-news">
+    <div class="scrolling-text">
+      ⏰ <strong>Dočasná zmena otváracích hodín:</strong> 09:00 – 16:00
+      &nbsp;&nbsp;|&nbsp;&nbsp; 
+      📢 <strong>Zľava 20 %</strong> každý prvý pracovný piatok v mesiaci – tento mesiac: <strong>05.12.2025</strong>
+    </div>
+  </div>
+
+  <!-- Navigácia -->
+  <nav>
+    <div class="logo">Čistiareň Blue Lanza</div>
+    <div class="nav-links">
+      <a href="index.html">Hlavná stránka</a>
+      <a href="cennik.html">Cenník</a>
+      <a href="zlavy.html">Zľavy</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="zaujimavosti.html">Zaujímavosti</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
 
   <header>
     <div class="overlay">
@@ -46,37 +80,52 @@
     </div>
   </header>
 
-  
-
   <footer id="kontakt">
     <p><strong>Adresa:</strong> Štefánikova 21, 91701 Trnava</p>
     <p><strong>Tel. č.:</strong> 0902/254 780 <span style="font-size: 0.9em; color: #666;">( 0903/427 536)</span></p>
-  
-  
-  
+
     <div class="hours">
-  <h4>Otváracie hodiny</h4>
+      <h4>Otváracie hodiny</h4>
 
-  <!-- Upozornenie na dočasnú zmenu -->
-  <div class="temporary-hours">
-    <strong><p>Dočasná zmena otváracích hodín: 09:00 – 16:00</p></strong>
-  </div>
+      <!-- Upozornenie na dočasnú zmenu -->
+      <div class="temporary-hours">
+        <strong><p>Dočasná zmena otváracích hodín: 09:00 – 16:00</p></strong>
+      </div>
 
-  <div class="hours-table">
-    <div><span>Pondelok</span><span>09:00 – 17:00</span></div>
-    <div><span>Utorok</span><span>09:00 – 17:00</span></div>
-    <div><span>Streda</span><span>09:00 – 17:00</span></div>
-    <div><span>Štvrtok</span><span>09:00 – 17:00</span></div>
-    <div><span>Piatok</span><span>09:00 – 17:00</span></div>
-    <div><span>Sobota</span><span>ZATVORENÉ</span></div>
-  </div>
-</div>
-</footer>
-  
+      <div class="hours-table">
+        <div><span>Pondelok</span><span>09:00 – 17:00</span></div>
+        <div><span>Utorok</span><span>09:00 – 17:00</span></div>
+        <div><span>Streda</span><span>09:00 – 17:00</span></div>
+        <div><span>Štvrtok</span><span>09:00 – 17:00</span></div>
+        <div><span>Piatok</span><span>09:00 – 17:00</span></div>
+        <div><span>Sobota</span><span>ZATVORENÉ</span></div>
+      </div>
+    </div>
+  </footer>
+
   <div class="site-credit">
     <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
   </div>
-  
 
+  <!-- JAVASCRIPT NA ZATVORENIE OBRÁZKA PO KLIKNUTÍ -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const overlay = document.getElementById("xmas-overlay");
+
+      if (!overlay) return;
+
+      // Kliknutie na overlay = skryť
+      overlay.addEventListener("click", function () {
+        overlay.classList.add("hidden");
+      });
+
+      // Voliteľné: zavretie aj klávesou Escape
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          overlay.classList.add("hidden");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
