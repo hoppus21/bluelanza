@@ -26,12 +26,14 @@
     }
 
     #xmas-overlay img {
-      max-width: 100%;
-      max-height: 100%;
-      display: block;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
+  width: 70vw;        /* zmenšíme šírku na cca 70 % okna */
+  height: auto;       /* výška sa dopočíta podľa pomeru strán */
+  max-height: 80vh;   /* nikdy nebude vyšší než 80 % výšky okna */
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
 
     .hidden {
       display: none !important;
