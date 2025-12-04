@@ -11,28 +11,27 @@
   <style>
     #xmas-overlay {
       position: fixed;
-      inset: 0; /* top:0; right:0; bottom:0; left:0; */
+      inset: 0;
       background: rgba(0, 0, 0, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 9999;
       cursor: pointer;
-      padding: 20px; /* okraj od okna pre lepší vzhľad */
+      padding: 20px;
     }
 
     #xmas-overlay .overlay-content {
       max-width: 90vw;
       max-height: 90vh;
-      overflow: auto;        /* ak je obrázok vyšší, bude scroll */
+      overflow: auto;
       border-radius: 12px;
     }
 
     #xmas-overlay img {
-  width: 60vw;    /* širší než predtým, ale stále elegantný */
-  max-width: 650px; /* aby nebol obrovský na veľkých monitoroch */
-  height: auto;
-}
+      width: 60vw;
+      max-width: 650px;
+      height: auto;
       display: block;
       border-radius: 12px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -51,8 +50,7 @@
     <div class="overlay-content">
       <img src="images/otvaracie-hodiny-vianoce.png" alt="Otváracie hodiny počas Vianoc">
     </div>
-</div>
-
+  </div>
 
   <!-- TOP NEWS PÁS -->
   <div class="top-news">
@@ -118,40 +116,24 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const overlay = document.getElementById("xmas-overlay");
+      const closeBtn = document.querySelector("#xmas-overlay .close-btn");
 
       if (!overlay) return;
 
-      // Kliknutie na overlay = skryť
-      document.addEventListener("DOMContentLoaded", function () {
-  const overlay = document.getElementById("xmas-overlay");
-  const closeBtn = document.querySelector(".close-btn");
-  const content = document.querySelector("#xmas-overlay .overlay-content");
+      // klik kdekoľvek na tmavé pozadie alebo obrázok → zavrieť
+      overlay.addEventListener("click", function () {
+        overlay.classList.add("hidden");
+      });
 
-  if (!overlay) return;
+      // klik na X → zavrieť (a nezopakovať klik na overlay)
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          overlay.classList.add("hidden");
+        });
+      }
 
-  // klik mimo obrázka → zavrieť
-  overlay.addEventListener("click", function (e) {
-    if (!content.contains(e.target)) {
-      overlay.classList.add("hidden");
-    }
-  });
-
-  // X tlačidlo → zavrieť
-  closeBtn.addEventListener("click", function (e) {
-    e.stopPropagation();
-    overlay.classList.add("hidden");
-  });
-
-  // ESC → zavrieť
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      overlay.classList.add("hidden");
-    }
-  });
-});
-
-
-      // Voliteľné: zavretie aj klávesou Escape
+      // ESC → zavrieť
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
           overlay.classList.add("hidden");
