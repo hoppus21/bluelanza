@@ -122,9 +122,34 @@
       if (!overlay) return;
 
       // Kliknutie na overlay = skryť
-      overlay.addEventListener("click", function () {
-        overlay.classList.add("hidden");
-      });
+      document.addEventListener("DOMContentLoaded", function () {
+  const overlay = document.getElementById("xmas-overlay");
+  const closeBtn = document.querySelector(".close-btn");
+  const content = document.querySelector("#xmas-overlay .overlay-content");
+
+  if (!overlay) return;
+
+  // klik mimo obrázka → zavrieť
+  overlay.addEventListener("click", function (e) {
+    if (!content.contains(e.target)) {
+      overlay.classList.add("hidden");
+    }
+  });
+
+  // X tlačidlo → zavrieť
+  closeBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    overlay.classList.add("hidden");
+  });
+
+  // ESC → zavrieť
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      overlay.classList.add("hidden");
+    }
+  });
+});
+
 
       // Voliteľné: zavretie aj klávesou Escape
       document.addEventListener("keydown", function (e) {
