@@ -18,22 +18,23 @@
       justify-content: center;
       z-index: 9999;
       cursor: pointer;
+      padding: 20px; /* okraj od okna pre lepší vzhľad */
     }
 
     #xmas-overlay .overlay-content {
       max-width: 90vw;
       max-height: 90vh;
+      overflow: auto;        /* ak je obrázok vyšší, bude scroll */
+      border-radius: 12px;
     }
 
     #xmas-overlay img {
-  width: 70vw;        /* zmenšíme šírku na cca 70 % okna */
-  height: auto;       /* výška sa dopočíta podľa pomeru strán */
-  max-height: 80vh;   /* nikdy nebude vyšší než 80 % výšky okna */
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
+      width: 100%;           /* prispôsobí sa šírke kontajnera */
+      height: auto;          /* zachová pomer strán */
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
 
     .hidden {
       display: none !important;
