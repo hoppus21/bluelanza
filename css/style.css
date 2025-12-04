@@ -400,3 +400,21 @@ footer .hours h4 {
     width: 200px;
   }
 }
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+}
+
+.close-btn:active {
+  transform: scale(0.9);
+}
+
