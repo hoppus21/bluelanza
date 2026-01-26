@@ -3,65 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blue Lanza – Chemická čistiareň</title>
+
+  <title>Čistiareň Blue Lanza Trnava – Chemická čistiareň odevov</title>
+
+  <meta name="description" content="Profesionálna chemická čistiareň Blue Lanza v centre Trnavy. Čistenie odevov, kabátov, šiat a textilu. Rýchle a spoľahlivé služby." />
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- ŠTÝLY PRE VYSKAKOVACÍ OBRÁZOK -->
-  <style>
-    #xmas-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      cursor: pointer;
-      padding: 20px;
-    }
-
-    #xmas-overlay .overlay-content {
-      max-width: 90vw;
-      max-height: 90vh;
-      overflow: auto;
-      border-radius: 12px;
-    }
-
-    #xmas-overlay img {
-      width: 60vw;
-      max-width: 650px;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .hidden {
-      display: none !important;
-    }
-  </style>
 </head>
-<body>
 
-  <!-- VYSKAKOVACÍ OBRÁZOK S OTVÁRACÍMI HODINAMI -->
-  <div id="xmas-overlay">
-    <button class="close-btn">×</button>
-    <div class="overlay-content">
-      <img src="images/otvaracie-hodiny-vianoce.png" alt="Otváracie hodiny počas Vianoc">
-    </div>
-  </div>
+<body>
 
   <!-- TOP NEWS PÁS -->
   <div class="top-news">
     <div class="scrolling-text">
       ⏰ <strong>Dočasná zmena otváracích hodín:</strong> 09:00 – 16:00
-      &nbsp;&nbsp;|&nbsp;&nbsp; 
+      &nbsp;&nbsp;|&nbsp;&nbsp;
       📢 <strong>Zľava 15 %</strong> každý prvý pracovný piatok v mesiaci – tento mesiac: <strong>06.02.2026</strong>
     </div>
   </div>
 
-  <!-- Navigácia -->
+  <!-- NAVIGÁCIA -->
   <nav>
     <div class="logo">Čistiareň Blue Lanza</div>
     <div class="nav-links">
@@ -74,10 +36,12 @@
     </div>
   </nav>
 
+  <!-- HLAVIČKA -->
   <header>
     <div class="overlay">
       <h1>Profesionálna starostlivosť o vaše oblečenie</h1>
-      <p>Spoľahlivá čistiareň v srdci Trnavy</p>
+      <p>Spoľahlivá chemická čistiareň v srdci Trnavy</p>
+
       <div class="buttons">
         <a href="sluzby.html">Zobraziť služby</a>
         <a href="kontakt.html">Kontaktujte nás</a>
@@ -85,16 +49,16 @@
     </div>
   </header>
 
+  <!-- FOOTER -->
   <footer id="kontakt">
-    <p><strong>Adresa:</strong> Štefánikova 21, 91701 Trnava</p>
-    <p><strong>Tel. č.:</strong> 0902/254 780 <span style="font-size: 0.9em; color: #666;">( 0903/427 536)</span></p>
+    <p><strong>Adresa:</strong> Štefánikova 21, 917 01 Trnava</p>
+    <p><strong>Tel. č.:</strong> 0902 / 254 780 <span style="font-size: 0.9em; color: #ddd;">(0903 / 427 536)</span></p>
 
     <div class="hours">
       <h4>Otváracie hodiny</h4>
 
-      <!-- Upozornenie na dočasnú zmenu -->
       <div class="temporary-hours">
-        <strong><p>Dočasná zmena otváracích hodín: 09:00 – 16:00</p></strong>
+        <strong>Dočasná zmena: 09:00 – 16:00</strong>
       </div>
 
       <div class="hours-table">
@@ -112,34 +76,5 @@
     <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
   </div>
 
-  <!-- JAVASCRIPT NA ZATVORENIE OBRÁZKA PO KLIKNUTÍ -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const overlay = document.getElementById("xmas-overlay");
-      const closeBtn = document.querySelector("#xmas-overlay .close-btn");
-
-      if (!overlay) return;
-
-      // klik kdekoľvek na tmavé pozadie alebo obrázok → zavrieť
-      overlay.addEventListener("click", function () {
-        overlay.classList.add("hidden");
-      });
-
-      // klik na X → zavrieť (a nezopakovať klik na overlay)
-      if (closeBtn) {
-        closeBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          overlay.classList.add("hidden");
-        });
-      }
-
-      // ESC → zavrieť
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-          overlay.classList.add("hidden");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
