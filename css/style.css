@@ -89,32 +89,6 @@ header p {
   background-color: #004f99;
 }
 
-/* NEWS BOX (ak ho používaš na iných stránkach) */
-.news {
-  max-width: 800px;
-  margin: 50px auto;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.news h2 {
-  color: #004080;
-  margin-bottom: 20px;
-}
-
-.news ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.news li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
 /* FOOTER */
 footer {
   background-color: #004080;
@@ -146,43 +120,7 @@ footer {
   100% { transform: translateX(-100%); }
 }
 
-/* NADPISY, TABUĽKY */
-h1, h2 {
-  color: #004080;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 40px;
-  background-color: white;
-}
-
-th, td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-  font-size: 0.95rem;
-}
-
-th {
-  background-color: #e0e7ff;
-}
-
-caption {
-  caption-side: top;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #004080;
-}
-
-.note {
-  font-size: 0.9rem;
-  margin-top: 20px;
-}
-
-/* OTVÁRACIE HODINY VO FOOTERI */
+/* OTVÁRACIE HODINY */
 footer .hours {
   margin-top: 20px;
   text-align: center;
@@ -207,25 +145,6 @@ footer .hours h4 {
   padding: 2px 0;
 }
 
-/* BOX NA ZĽAVY NA STRÁNKE ZLAVY */
-.discount-box {
-  background-color: #ffffff;
-  border-left: 5px solid #0066cc;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.discount-box h2 {
-  margin-top: 0;
-  color: #004080;
-}
-
-.discount-box ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
 /* CREDIT DOLE */
 .site-credit {
   background-color: #f0f0f0;
@@ -236,106 +155,64 @@ footer .hours h4 {
   border-top: 1px solid #ddd;
 }
 
-/* KONTAKT / KARTY / INÉ STRÁNKY */
-.kontakt-header img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  display: block;
-}
+/* ======================= */
+/* POPUP (NOVÝ OZNAM) */
+/* ======================= */
 
-.page-header {
-  background-image: url('../images/cistiaren.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: white;
-  padding: 120px 20px;
-  position: relative;
-}
-
-.header-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 40px 20px;
-  border-radius: 8px;
-  display: inline-block;
-}
-
-.map-container {
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.media-story img, .before-after img {
-  border-radius: 8px;
-  margin: 10px 0;
-}
-
-.before-after .ba-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.before-after .ba-container div {
-  flex: 1 1 300px;
-  text-align: center;
-}
-
-/* HLAVIČKY INÝCH STRÁNOK */
-.header-zlavy {
-  background-image: url('../images/cistiaren.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: white;
-  padding: 120px 20px;
-  position: relative;
-}
-
-.header-overlay p {
-  color: white !important;
-}
-
-.header-main,
-.header-cennik,
-.header-zlavy,
-.header-kontakt,
-.header-zaujimavosti {
-  min-height: 350px;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: white;
-  padding: 120px 20px;
-  position: relative;
+.promo-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
+  padding: 20px;
 }
 
-/* DOČASNÉ HODINY – ČERVENÉ UPOZORNENIE */
-.temporary-hours {
-  color: #d00000;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-bottom: 8px;
-  text-transform: uppercase;
+.promo-box {
+  background: white;
+  width: min(520px, 92vw);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+  position: relative;
+  text-align: center;
+}
+
+.promo-box h3 {
+  margin-top: 0;
+  color: #004080;
+}
+
+.promo-box p {
+  font-size: 1.05rem;
+}
+
+.promo-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 34px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.promo-close:hover {
+  opacity: 0.7;
+}
+
+.promo-hidden {
+  display: none !important;
 }
 
 /* ======================= */
-/* MOBILNÁ VERZIA          */
+/* MOBILNÁ VERZIA */
 /* ======================= */
+
 @media (max-width: 768px) {
-  body {
-    font-size: 15px;
-  }
 
-  /* nav hore – logo nad linkami, linky do riadkov */
   nav {
     flex-direction: column;
     align-items: center;
@@ -358,7 +235,6 @@ footer .hours h4 {
     font-size: 0.95rem;
   }
 
-  /* hlavička – menší text a menšia výška, aby nebola obrovská */
   header {
     height: auto;
     min-height: 70vh;
@@ -385,13 +261,10 @@ footer .hours h4 {
     text-align: center;
   }
 
-  /* bežiaci text hore – menší na mobile */
   .scrolling-text {
     font-size: 0.85rem;
-    padding: 8px 0;
   }
 
-  /* footer text a tabuľka hodin menšie, aby sa zmestili */
   .hours-table {
     font-size: 0.9rem;
   }
@@ -399,22 +272,5 @@ footer .hours h4 {
   .hours-table div {
     width: 200px;
   }
-}
 
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 40px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 10000;
-  line-height: 1;
 }
-
-.close-btn:active {
-  transform: scale(0.9);
-}
-
