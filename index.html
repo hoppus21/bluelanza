@@ -5,19 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Čistiareň Blue Lanza Trnava – Chemická čistiareň odevov</title>
-
   <meta name="description" content="Profesionálna chemická čistiareň Blue Lanza v centre Trnavy. Čistenie odevov, kabátov, šiat a textilu. Rýchle a spoľahlivé služby." />
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- POPUP CSS (len pre tento oznam) -->
+  <style>
+    .promo-popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 18px;
+    }
+
+    .promo-box {
+      background: #ffffff;
+      width: min(520px, 92vw);
+      border-radius: 14px;
+      padding: 22px 18px 18px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+      position: relative;
+      text-align: center;
+    }
+
+    .promo-box h3 {
+      margin: 0 0 10px;
+      color: #004080;
+    }
+
+    .promo-box p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.4;
+      color: #222;
+    }
+
+    .promo-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      border: none;
+      background: transparent;
+      font-size: 34px;
+      line-height: 1;
+      cursor: pointer;
+      color: #222;
+    }
+
+    .promo-close:active {
+      transform: scale(0.92);
+    }
+
+    .promo-hidden {
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
+  <!-- POPUP OZNAME -->
+  <div id="promo-popup" class="promo-popup" aria-hidden="false">
+    <div class="promo-box" role="dialog" aria-modal="true" aria-label="Oznam">
+      <button class="promo-close" type="button" aria-label="Zatvoriť">×</button>
+      <h3>Oznam</h3>
+      <p><strong>Akcia „Prvý Piatok v mesiaci“ je dočasne zrušená.</strong></p>
+    </div>
+  </div>
+
   <!-- TOP NEWS PÁS -->
   <div class="top-news">
     <div class="scrolling-text">
-      📢 <strong>Vítame vás na webstránke čistiarne blue Lanza</strong>
+      📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
     </div>
   </div>
 
@@ -55,7 +119,6 @@
     <div class="hours">
       <h4>Otváracie hodiny</h4>
 
-
       <div class="hours-table">
         <div><span>Pondelok</span><span>09:00 – 16:00</span></div>
         <div><span>Utorok</span><span>09:00 – 16:00</span></div>
@@ -71,8 +134,37 @@
     <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
   </div>
 
-  <!-- POPUP SCRIPT -->
-  <script src="popup.js"></script>
+  <!-- POPUP JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const popup = document.getElementById("promo-popup");
+      const closeBtn = popup ? popup.querySelector(".promo-close") : null;
+      const box = popup ? popup.querySelector(".promo-box") : null;
+
+      if (!popup || !closeBtn || !box) return;
+
+      function closePopup() {
+        popup.classList.add("promo-hidden");
+        popup.setAttribute("aria-hidden", "true");
+      }
+
+      // X tlačidlo
+      closeBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        closePopup();
+      });
+
+      // klik mimo okna
+      popup.addEventListener("click", function (e) {
+        if (!box.contains(e.target)) closePopup();
+      });
+
+      // ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closePopup();
+      });
+    });
+  </script>
 
 </body>
 </html>
