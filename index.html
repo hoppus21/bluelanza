@@ -69,7 +69,7 @@
 
 <body>
 
-  <!-- POPUP OZNAME -->
+  <!-- POPUP OZNAM -->
   <div id="promo-popup" class="promo-popup" aria-hidden="false">
     <div class="promo-box" role="dialog" aria-modal="true" aria-label="Oznam">
       <button class="promo-close" type="button" aria-label="Zatvoriť">×</button>
@@ -137,31 +137,43 @@
   <!-- POPUP JS -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      const POPUP_ENABLED = false; // true = zapnutý, false = vypnutý
+
       const popup = document.getElementById("promo-popup");
       const closeBtn = popup ? popup.querySelector(".promo-close") : null;
       const box = popup ? popup.querySelector(".promo-box") : null;
 
-      if (!popup || !closeBtn || !box) return;
+      if (!popup) return;
+
+      // Popup je vypnutý, ale ostáva v kóde pre neskoršie použitie
+      if (!POPUP_ENABLED) {
+        popup.classList.add("promo-hidden");
+        popup.setAttribute("aria-hidden", "true");
+        return;
+      }
 
       function closePopup() {
         popup.classList.add("promo-hidden");
         popup.setAttribute("aria-hidden", "true");
       }
 
-      // X tlačidlo
-      closeBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        closePopup();
-      });
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          closePopup();
+        });
+      }
 
-      // klik mimo okna
       popup.addEventListener("click", function (e) {
-        if (!box.contains(e.target)) closePopup();
+        if (box && !box.contains(e.target)) {
+          closePopup();
+        }
       });
 
-      // ESC
       document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") closePopup();
+        if (e.key === "Escape") {
+          closePopup();
+        }
       });
     });
   </script>
