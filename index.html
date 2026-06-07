@@ -70,20 +70,22 @@
 <body>
 
   <!-- POPUP OZNAM -->
-  <div id="promo-popup" class="promo-popup" aria-hidden="false">
+  <div id="promo-popup" class="promo-popup promo-hidden" aria-hidden="true">
     <div class="promo-box" role="dialog" aria-modal="true" aria-label="Oznam">
       <button class="promo-close" type="button" aria-label="Zatvoriť">×</button>
-      <h3>Oznam</h3>
-      <p><strong>Akcia „Prvý Piatok v mesiaci“ je dočasne zrušená.</strong></p>
+      <h3>🎉 AKCIA 🎉</h3>
+<p><strong>03.07.2026</strong></p>
+<p><strong>ZĽAVA 15 % NA VŠETKO</strong></p>
     </div>
   </div>
 
   <!-- TOP NEWS PÁS -->
   <div class="top-news">
     <div class="scrolling-text">
-      📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong> <strong>03.07. 2026 - Zľava 15% na všetko</strong>
-    </div>
-  </div>
+  📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  🎉 <strong>03.07.2026 – ZĽAVA 15 % NA VŠETKO</strong>
+</div>
 
   <!-- NAVIGÁCIA -->
   <nav>
@@ -137,7 +139,7 @@
   <!-- POPUP JS -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const POPUP_ENABLED = false; // true = zapnutý, false = vypnutý
+      const POPUP_ENABLED = true; // true = zapnutý, false = vypnutý
 
       const popup = document.getElementById("promo-popup");
       const closeBtn = popup ? popup.querySelector(".promo-close") : null;
@@ -145,12 +147,14 @@
 
       if (!popup) return;
 
-      // Popup je vypnutý, ale ostáva v kóde pre neskoršie použitie
-      if (!POPUP_ENABLED) {
-        popup.classList.add("promo-hidden");
-        popup.setAttribute("aria-hidden", "true");
-        return;
-      }
+if (POPUP_ENABLED) {
+  popup.classList.remove("promo-hidden");
+  popup.setAttribute("aria-hidden", "false");
+} else {
+  popup.classList.add("promo-hidden");
+  popup.setAttribute("aria-hidden", "true");
+  return;
+}
 
       function closePopup() {
         popup.classList.add("promo-hidden");
