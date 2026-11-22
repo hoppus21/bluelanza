@@ -4,74 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zaujímavosti – Čistiareň Blue Lanza</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Pozrite sa, ako vyzerajú odevy pred a po čistení v čistiarni Blue Lanza Trnava." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Top news -->
+
+  <!-- ŽLTÝ BEŽIACI PÁS -->
   <div class="top-news">
     <div class="scrolling-text">
-    📢 <strong>Vítame vás na webstránke čistiarne blue Lanza</strong>
-    
-</div>
+      📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
+    </div>
   </div>
 
-  <!-- Navigácia -->
+  <!-- NAVIGÁCIA -->
   <nav>
-    <div class="logo">Čistiareň Blue Lanza</div>
+    <a class="logo" href="index.html">Čistiareň Blue Lanza</a>
     <div class="nav-links">
       <a href="index.html">Hlavná stránka</a>
+      <a href="o-nas.html">O nás</a>
       <a href="cennik.html">Cenník</a>
       <a href="zlavy.html">Zľavy</a>
       <a href="sluzby.html">Služby</a>
-      <a href="zaujimavosti.html">Zaujímavosti</a>
+      <a href="zaujimavosti.html" class="active">Zaujímavosti</a>
       <a href="kontakt.html">Kontakt</a>
     </div>
   </nav>
 
-  <header class="header-zaujimavosti">
+  <!-- HLAVIČKA -->
+  <header class="page-header">
     <div class="header-overlay">
-      <h1>Zaujímavosti a príbehy z čistiarne</h1>
-      <p>Niektoré príbehy stoja za zverejnenie. Pozrite si, čo sa u nás stalo alebo ako vyzerá rozdiel pred a po čistení.</p>
+      <h1>Zaujímavosti</h1>
+      <p>Výsledky našej práce a príbehy z čistiarne</p>
     </div>
   </header>
-  
 
-  <!-- Obsah -->
   <main class="container">
-    <h1>Zaujímavosti z našej čistiarne</h1>
-    
-
-    <section class="before-after">
-      <h2>✨ Pred a po čistení</h2>
-      <div class="ba-container">
-        <div>
-          <h3>Pred</h3>
-          <img src="images/pred.jpg" alt="Šaty pred čistením" />
-        </div>
-        <div>
-          <h3>Po</h3>
-          <img src="images/po.jpg" alt="Šaty po čistení" />
-        </div>
+    <h2 class="section-title">✨ Pred a po čistení</h2>
+    <p class="center muted-dark">Posuňte čiaru doľava a doprava</p>
+    <div class="ba-grid">
+      <div class="ba-slider">
+        <img src="images/po.jpg" alt="Dres po čistení" />
+        <div class="ba-before"><img src="images/pred.jpg" alt="Dres pred čistením" /></div>
+        <span class="ba-tag ba-tag-before">Pred</span>
+        <span class="ba-tag ba-tag-after">Po</span>
+        <div class="ba-line"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Posuňte pre porovnanie pred a po" />
       </div>
-    </section>
+      <div class="ba-slider">
+        <img src="images/po2.jpg" alt="Zimná bunda po čistení" />
+        <div class="ba-before"><img src="images/pred2.jpg" alt="Zimná bunda pred čistením" /></div>
+        <span class="ba-tag ba-tag-before">Pred</span>
+        <span class="ba-tag ba-tag-after">Po</span>
+        <div class="ba-line"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Posuňte pre porovnanie pred a po" />
+      </div>
+    </div>
 
     <section class="media-story">
-        <h2>📰 Napísali o nás</h2>
-        <p>V miestnych novinách vyšiel článok o tom, ako sme zákazníkovi vrátili vyprané peniaze, ktoré zabudol vo vrecku. Čestnosť je pre nás samozrejmosťou.</p>
-        <img src="images/clanok.jpg" alt="Článok z novín" />
-      </section>
+      <h2 class="section-title">📰 Napísali o nás</h2>
+      <p>V miestnych novinách vyšiel článok o tom, ako sme zákazníkovi vrátili vyprané peniaze, ktoré zabudol vo vrecku. Čestnosť je pre nás samozrejmosťou.</p>
+      <img src="images/clanok.jpg" alt="Článok z novín o čistiarni Blue Lanza" />
+    </section>
   </main>
-  <p style="margin-top: 40px;">
-    <a href="index.html" style="color: #0066cc; font-weight: bold;">← Späť na hlavnú stránku</a>
-  </p>
-  <!-- Footer -->
+
+  <!-- PÄTIČKA (rovnaká na všetkých stránkach) -->
   <footer>
-    <p><strong>Adresa:</strong> Štefánikova 21, 91701 Trnava</p>
-    <p><strong>Tel. č.:</strong> 0902/254 780 <span>(prevádzka, do 16:00)</span> · 0903/427 536</p>
-    <div class="site-credit">
-      <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
+    <div class="footer-grid">
+      <div>
+        <h4>Kontakt</h4>
+        <p>Štefánikova 21, 917 01 Trnava<br><span class="muted">Pasáž hotela MAX PLAZA, oproti Domu svetla</span></p>
+        <p><a href="tel:+421902254780">0902/254 780</a> <span class="muted">(prevádzka, do 16:00)</span><br><a href="tel:+421903427536">0903/427 536</a></p>
+      </div>
+      <div>
+        <h4>Otváracie hodiny</h4>
+        <div class="hours-table">
+          <div><span>Pondelok – Piatok</span><span>09:00 – 16:00</span></div>
+          <div><span>Sobota – Nedeľa</span><span>ZATVORENÉ</span></div>
+        </div>
+      </div>
+      <div>
+        <h4>Nájdete nás na Google</h4>
+        <a class="google-badge" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">
+          <span class="google-stars">★★★★★</span>
+          <span><strong>4,7</strong> hodnotenie zákazníkov</span>
+        </a>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">Navigovať k nám →</a></p>
+      </div>
     </div>
   </footer>
+  <div class="site-credit">
+    <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
+  </div>
+
+  <!-- TLAČIDLO ZAVOLAŤ (len na mobile) -->
+  <a class="call-button" href="tel:+421902254780" aria-label="Zavolať do čistiarne">📞 Zavolať</a>
+
+  <!-- POSÚVAČ PRED / PO -->
+  <script>
+    document.querySelectorAll(".ba-slider").forEach(function (s) {
+      const input = s.querySelector("input");
+      function update() { s.style.setProperty("--pos", input.value + "%"); }
+      input.addEventListener("input", update);
+      update();
+    });
+  </script>
 </body>
 </html>

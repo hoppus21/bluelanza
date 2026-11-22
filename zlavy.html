@@ -4,64 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zľavy – Čistiareň Blue Lanza</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Stále zľavy v čistiarni Blue Lanza Trnava – pre dôchodcov nad 70 rokov, držiteľov ZŤP a množstevné zľavy." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-    <div class="top-news">
-        <div class="scrolling-text">
-    📢 <strong>Vítame vás na webstránke čistiarne blue Lanza</strong>
-    
-</div>
-      </div>
-    
-      <!-- Navigácia -->
-      <nav>
-        <div class="logo">Čistiareň Blue Lanza</div>
-        <div class="nav-links">
-          <a href="index.html">Hlavná stránka</a>
-          <a href="cennik.html">Cenník</a>
-          <a href="zlavy.html">Zľavy</a>
-          <a href="sluzby.html">Služby</a>
-          <a href="zaujimavosti.html">Zaujímavosti</a>
-          <a href="kontakt.html">Kontakt</a>
-        </div>
-      </nav>
+  <!-- ŽLTÝ BEŽIACI PÁS -->
+  <div class="top-news">
+    <div class="scrolling-text">
+      📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
+    </div>
+  </div>
 
-      <header class="header-zlavy">
-        <div class="header-overlay">
-          <h1>Zľavy a zvýhodnené ponuky</h1>
-          <p>Využite naše akcie a pravidelné zľavy</p>
-        </div>
-      </header>
+  <!-- NAVIGÁCIA -->
+  <nav>
+    <a class="logo" href="index.html">Čistiareň Blue Lanza</a>
+    <div class="nav-links">
+      <a href="index.html">Hlavná stránka</a>
+      <a href="o-nas.html">O nás</a>
+      <a href="cennik.html">Cenník</a>
+      <a href="zlavy.html" class="active">Zľavy</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="zaujimavosti.html">Zaujímavosti</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- HLAVIČKA -->
+  <header class="page-header">
+    <div class="header-overlay">
+      <h1>Zľavy</h1>
+      <p>Ušetrite pri každej návšteve</p>
+    </div>
+  </header>
 
   <main class="container">
-    <section class="discount-box">
-      <h2>Stále zľavy</h2>
-      <p><strong>10 % zľava</strong> pre:</p>
-      <ul>
-        <li>dôchodcov nad 70 rokov</li>
-        <li>držiteľov preukazu ZŤP</li>
-      </ul>
-      <p>Zľava  5 Ks šatstva - 10 %</p>
-      <p>Zľava  8 Ks šatstva - 15 %</p>
-      <p>Zľava 10 Ks šatstva - 20 %</p>            
-        </p>
-    </section>
+    <h2 class="section-title">Stále zľavy</h2>
+    <div class="cards">
+      <div class="card discount">
+        <span class="discount-number">10 %</span>
+        <h3>Dôchodcovia nad 70 rokov</h3>
+      </div>
+      <div class="card discount">
+        <span class="discount-number">10 %</span>
+        <h3>Držitelia preukazu ZŤP</h3>
+      </div>
+    </div>
 
- 
-    <p style="margin-top: 40px;">
-      <a href="index.html" style="color: #0066cc; font-weight: bold;">← Späť na hlavnú stránku</a>
-    </p>
+    <h2 class="section-title">Množstevné zľavy</h2>
+    <div class="cards">
+      <div class="card discount"><span class="discount-number">10 %</span><h3>pri 5 ks šatstva</h3></div>
+      <div class="card discount"><span class="discount-number">15 %</span><h3>pri 8 ks šatstva</h3></div>
+      <div class="card discount"><span class="discount-number">20 %</span><h3>pri 10 ks šatstva</h3></div>
+    </div>
   </main>
-  <!-- Footer -->
+
+  <!-- PÄTIČKA (rovnaká na všetkých stránkach) -->
   <footer>
-    <p><strong>Adresa:</strong> Štefánikova 21, 91701 Trnava</p>
-    <p><strong>Tel. č.:</strong> 0902/254 780 <span>(prevádzka, do 16:00)</span> · 0903/427 536</p>
-    <div class="site-credit">
-      <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
+    <div class="footer-grid">
+      <div>
+        <h4>Kontakt</h4>
+        <p>Štefánikova 21, 917 01 Trnava<br><span class="muted">Pasáž hotela MAX PLAZA, oproti Domu svetla</span></p>
+        <p><a href="tel:+421902254780">0902/254 780</a> <span class="muted">(prevádzka, do 16:00)</span><br><a href="tel:+421903427536">0903/427 536</a></p>
+      </div>
+      <div>
+        <h4>Otváracie hodiny</h4>
+        <div class="hours-table">
+          <div><span>Pondelok – Piatok</span><span>09:00 – 16:00</span></div>
+          <div><span>Sobota – Nedeľa</span><span>ZATVORENÉ</span></div>
+        </div>
+      </div>
+      <div>
+        <h4>Nájdete nás na Google</h4>
+        <a class="google-badge" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">
+          <span class="google-stars">★★★★★</span>
+          <span><strong>4,7</strong> hodnotenie zákazníkov</span>
+        </a>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">Navigovať k nám →</a></p>
+      </div>
     </div>
   </footer>
+  <div class="site-credit">
+    <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
+  </div>
+
+  <!-- TLAČIDLO ZAVOLAŤ (len na mobile) -->
+  <a class="call-button" href="tel:+421902254780" aria-label="Zavolať do čistiarne">📞 Zavolať</a>
+
 </body>
 </html>

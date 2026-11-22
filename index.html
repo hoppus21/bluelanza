@@ -3,103 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Čistiareň Blue Lanza Trnava – Chemická čistiareň odevov</title>
   <meta name="description" content="Profesionálna chemická čistiareň Blue Lanza v centre Trnavy. Čistenie odevov, kabátov, šiat a textilu. Rýchle a spoľahlivé služby." />
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- POPUP CSS (len pre tento oznam) -->
-  <style>
-    .promo-popup {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      padding: 18px;
-    }
-
-    .promo-box {
-      background: #ffffff;
-      width: min(520px, 92vw);
-      border-radius: 14px;
-      padding: 22px 18px 18px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
-      position: relative;
-      text-align: center;
-    }
-
-    .promo-box h3 {
-      margin: 0 0 10px;
-      color: #004080;
-    }
-
-    .promo-box p {
-      margin: 0;
-      font-size: 1.05rem;
-      line-height: 1.4;
-      color: #222;
-    }
-
-    .promo-close {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      border: none;
-      background: transparent;
-      font-size: 34px;
-      line-height: 1;
-      cursor: pointer;
-      color: #222;
-    }
-
-    .promo-close:active {
-      transform: scale(0.92);
-    }
-
-    .promo-hidden {
-      display: none !important;
-    }
-  </style>
 </head>
-
 <body>
-
-  <!-- POPUP OZNAM -->
+  <!-- ============================================== -->
+  <!-- POPUP OZNAM (akcia)                              -->
+  <!-- Zapnutie / vypnutie: dole v skripte POPUP_ENABLED -->
+  <!-- Text akcie meníš tu:                             -->
+  <!-- ============================================== -->
   <div id="promo-popup" class="promo-popup promo-hidden" aria-hidden="true">
     <div class="promo-box" role="dialog" aria-modal="true" aria-label="Oznam">
       <button class="promo-close" type="button" aria-label="Zatvoriť">×</button>
-      <h3>🎉 AKCIA 🎉</h3>
-
-<p><strong>04.12.2026</strong></p>
-<p><strong>ZĽAVA 15 % NA ČISTENIE</strong></p>
-<hr style="margin:15px 0;">
-
-
-
-<hr style="margin:15px 0;">
-
-
+      <div class="promo-icon">🎉</div>
+      <h3>AKCIA</h3>
+      <p class="promo-date">04.12.2026</p>
+      <p class="promo-main">ZĽAVA 15 % NA ČISTENIE</p>
+      <button class="promo-ok" type="button">Rozumiem</button>
     </div>
   </div>
 
-  <!-- TOP NEWS PÁS -->
+  <!-- ŽLTÝ BEŽIACI PÁS -->
   <div class="top-news">
     <div class="scrolling-text">
-  📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-  🎉 <strong>04.12.2026 – ZĽAVA 15 % NA ČISTENIE</strong>
-</div>
+      📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      🎉 <strong>04.12.2026 – ZĽAVA 15 % NA ČISTENIE</strong>
+    </div>
+  </div>
 
   <!-- NAVIGÁCIA -->
   <nav>
-    <div class="logo">Čistiareň Blue Lanza</div>
+    <a class="logo" href="index.html">Čistiareň Blue Lanza</a>
     <div class="nav-links">
-      <a href="index.html">Hlavná stránka</a>
+      <a href="index.html" class="active">Hlavná stránka</a>
+      <a href="o-nas.html">O nás</a>
       <a href="cennik.html">Cenník</a>
       <a href="zlavy.html">Zľavy</a>
       <a href="sluzby.html">Služby</a>
@@ -108,88 +48,134 @@
     </div>
   </nav>
 
-  <!-- HLAVIČKA -->
-  <header>
+  <!-- HLAVIČKA S FOTKOU -->
+  <header class="hero">
     <div class="overlay">
+      <span class="hero-badge">Od roku 1991 · 35 rokov s vami</span>
       <h1>Profesionálna starostlivosť o vaše oblečenie</h1>
       <p>Spoľahlivá chemická čistiareň v srdci Trnavy</p>
-
       <div class="buttons">
         <a href="sluzby.html">Zobraziť služby</a>
-        <a href="kontakt.html">Kontaktujte nás</a>
+        <a href="kontakt.html" class="btn-light">Kontaktujte nás</a>
       </div>
     </div>
   </header>
 
-  <!-- FOOTER -->
-  <footer id="kontakt">
-    <p><strong>Adresa:</strong> Štefánikova 21, 917 01 Trnava</p>
-    <p><strong>Tel. č.:</strong> 0902/254 780 <span>(prevádzka, do 16:00)</span> · 0903/427 536</p>
+  <main>
+    <!-- PREHĽAD SLUŽIEB -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Čo pre vás urobíme</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">🧥</div>
+            <h3>Chemické čistenie</h3>
+            <p>Kabáty, saká, nohavice, šaty aj bundy – šetrne a dôkladne.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">👔</div>
+            <h3>Pranie a žehlenie košieľ</h3>
+            <p>Košele pripravené do práce či na slávnostnú príležitosť.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">👰</div>
+            <h3>Svadobné a spoločenské šaty</h3>
+            <p>Opatrná starostlivosť o vaše najvzácnejšie kúsky.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🛏️</div>
+            <h3>Záclony a paplóny</h3>
+            <p>Pranie záclon, paplónov, vankúšov aj diek.</p>
+          </div>
+        </div>
+        <p class="center"><a class="btn" href="sluzby.html">Všetky služby</a> <a class="btn btn-outline" href="cennik.html">Cenník</a></p>
+      </div>
+    </section>
 
-    <div class="hours">
-      <h4>Otváracie hodiny</h4>
+    <!-- DÔVERA -->
+    <section class="section section-blue">
+      <div class="container trust">
+        <div class="trust-item"><span class="trust-number">35</span><span>rokov skúseností</span></div>
+        <div class="trust-item"><span class="trust-number">4,7 ★</span><span>hodnotenie na Google</span></div>
+        <div class="trust-item"><span class="trust-number">24 h</span><span>expresné čistenie</span></div>
+      </div>
+    </section>
 
-      <div class="hours-table">
-        <div><span>Pondelok</span><span>09:00 – 16:00</span></div>
-        <div><span>Utorok</span><span>09:00 – 16:00</span></div>
-        <div><span>Streda</span><span>09:00 – 16:00</span></div>
-        <div><span>Štvrtok</span><span>09:00 – 16:00</span></div>
-        <div><span>Piatok</span><span>09:00 – 16:00</span></div>
-        <div><span>Sobota</span><span>ZATVORENÉ</span></div>
-        <div><span>Nedeľa</span><span>ZATVORENÉ</span></div>
+    <!-- O NÁS NÁHĽAD -->
+    <section class="section">
+      <div class="container about">
+        <div class="about-text">
+          <span class="about-label">Blue Lanza</span>
+          <h2>Už 35 rokov v dobrých rukách</h2>
+          <p>Od roku 1991 sa s láskou staráme o vaše oblečenie. Ku každému odevu pristupujeme s maximálnou opatrnosťou a poctivosťou, akoby bol náš vlastný.</p>
+          <p><a class="btn" href="o-nas.html">Viac o nás</a></p>
+        </div>
+        <div class="about-poster small">
+          <img src="images/plagat-35-rokov.jpg" alt="Plagát: Blue Lanza už 35 rokov v dobrých rukách" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PÄTIČKA (rovnaká na všetkých stránkach) -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Kontakt</h4>
+        <p>Štefánikova 21, 917 01 Trnava<br><span class="muted">Pasáž hotela MAX PLAZA, oproti Domu svetla</span></p>
+        <p><a href="tel:+421902254780">0902/254 780</a> <span class="muted">(do 16:00)</span></p>
+      </div>
+      <div>
+        <h4>Otváracie hodiny</h4>
+        <div class="hours-table">
+          <div><span>Pondelok – Piatok</span><span>09:00 – 16:00</span></div>
+          <div><span>Sobota – Nedeľa</span><span>ZATVORENÉ</span></div>
+        </div>
+      </div>
+      <div>
+        <h4>Nájdete nás na Google</h4>
+        <a class="google-badge" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">
+          <span class="google-stars">★★★★★</span>
+          <span><strong>4,7</strong> hodnotenie zákazníkov</span>
+        </a>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">Navigovať k nám →</a></p>
       </div>
     </div>
   </footer>
-
   <div class="site-credit">
     <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
   </div>
 
-  <!-- POPUP JS -->
+  <!-- TLAČIDLO ZAVOLAŤ (len na mobile) -->
+  <a class="call-button" href="tel:+421902254780" aria-label="Zavolať do čistiarne">📞 Zavolať</a>
+
+  <!-- POPUP SKRIPT -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const POPUP_ENABLED = true; // true = zapnutý, false = vypnutý
 
       const popup = document.getElementById("promo-popup");
-      const closeBtn = popup ? popup.querySelector(".promo-close") : null;
-      const box = popup ? popup.querySelector(".promo-box") : null;
+      if (!popup || !POPUP_ENABLED) return;
+      const box = popup.querySelector(".promo-box");
 
-      if (!popup) return;
-
-if (POPUP_ENABLED) {
-  popup.classList.remove("promo-hidden");
-  popup.setAttribute("aria-hidden", "false");
-} else {
-  popup.classList.add("promo-hidden");
-  popup.setAttribute("aria-hidden", "true");
-  return;
-}
+      popup.classList.remove("promo-hidden");
+      popup.setAttribute("aria-hidden", "false");
 
       function closePopup() {
         popup.classList.add("promo-hidden");
         popup.setAttribute("aria-hidden", "true");
       }
 
-      if (closeBtn) {
-        closeBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          closePopup();
-        });
-      }
-
-      popup.addEventListener("click", function (e) {
-        if (box && !box.contains(e.target)) {
-          closePopup();
-        }
+      popup.querySelectorAll(".promo-close, .promo-ok").forEach(function (btn) {
+        btn.addEventListener("click", closePopup);
       });
-
+      popup.addEventListener("click", function (e) {
+        if (!box.contains(e.target)) closePopup();
+      });
       document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-          closePopup();
-        }
+        if (e.key === "Escape") closePopup();
       });
     });
   </script>
-
 </body>
 </html>

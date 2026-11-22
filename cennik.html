@@ -1,165 +1,137 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cenník – Čistiareň Blue Lanza</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Cenník chemického čistenia v čistiarni Blue Lanza Trnava – čistenie za 5 dní, 3 dni alebo expresne za 24 hodín." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 40px;
-    }
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      text-align: left;
-      font-size: 0.95rem;
-    }
-    th {
-      background-color: #e0e7ff;
-    }
-    caption {
-      caption-side: top;
-      font-weight: bold;
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-    .note {
-      font-size: 0.9rem;
-      margin-top: 20px;
-    }
-  </style>
 </head>
 <body>
 
-    <!-- Žltý oznamový pás -->
-<div class="top-news">
-  <div class="scrolling-text">
-    📢 <strong>Vítame vás na webstránke čistiarne blue Lanza</strong>
+  <!-- ŽLTÝ BEŽIACI PÁS -->
+  <div class="top-news">
+    <div class="scrolling-text">
+      📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
+    </div>
   </div>
-</div>
 
-  
-    <!-- Navigácia -->
-    <nav>
-      <div class="logo">Čistiareň Blue Lanza</div>
-      <div class="nav-links">
-        <a href="index.html">Hlavná stránka</a>
-        <a href="cennik.html" class="active">Cenník</a>
-        <a href="zlavy.html">Zľavy</a>
-        <a href="sluzby.html">Služby</a>
-        <a href="zaujimavosti.html">Zaujímavosti</a>
-        <a href="kontakt.html">Kontakt</a>
-      </div>
-    </nav>
-  
-    <header class="header-cennik">
-      <div class="header-overlay">
-        <h1>Cenník – Čistiareň Blue Lanza</h1>
-        <p>Kompletný prehľad našich služieb a cien</p>
-      </div>
-    </header>
-    
+  <!-- NAVIGÁCIA -->
+  <nav>
+    <a class="logo" href="index.html">Čistiareň Blue Lanza</a>
+    <div class="nav-links">
+      <a href="index.html">Hlavná stránka</a>
+      <a href="o-nas.html">O nás</a>
+      <a href="cennik.html" class="active">Cenník</a>
+      <a href="zlavy.html">Zľavy</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="zaujimavosti.html">Zaujímavosti</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
 
-  <div class="container">
-    <table>
-      <caption>SORTIMENT</caption>
-      <thead>
-        <tr>
-          <th>Položka</th>
-          <th>5 dní</th>
-          <th>3 dni</th>
-          <th>24 hod</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>kabát, plášť, paleto</td><td>12,90</td><td>14,20</td><td>15,00</td></tr>
-        <tr><td>vetrovka, zat. vesta pér.</td><td>12,90</td><td>14,20</td><td>15,00</td></tr>
-        <tr><td>Vetr. bez podšívky</td><td>11,40</td><td>12,60</td><td>13,30</td></tr>
-        <tr><td>Nohavice, sako, župan</td><td>9,80</td><td>10,50</td><td>10,90</td></tr>
-        <tr><td>sukňa krátka</td><td>8,50</td><td>9,20</td><td>9,80</td></tr>
-        <tr><td>šaty krátke</td><td>9,80</td><td>10,50</td><td>10,90</td></tr>
-        <tr><td>sveter, košeľa</td><td>6,00</td><td>6,90</td><td>7,20</td></tr>
-        <tr><td>vesta zateplená</td><td>11,40</td><td>12,60</td><td>13,30</td></tr>
-        <tr><td>overal, deka, noh. otep.</td><td>12,90</td><td>14,20</td><td>15,00</td></tr>
-        <tr><td>fusak - umelý</td><td>11,40</td><td>12,60</td><td>13,30</td></tr>
-        <tr><td>prac. blúza, noh.</td><td>7,00</td><td>8,10</td><td>8,90</td></tr>
-        <tr><td>Záclona, malá do 7m²</td><td>8,50</td><td>9,20</td><td>10,90</td></tr>
-        <tr><td>pracovný kabát</td><td>12,50</td><td>13,20</td><td>14,00</td></tr>
-        <tr><td>vesta obleková, top</td><td>8,50</td><td>8,80</td><td>9,20</td></tr>
-        <tr><td>viazanka</td><td>5,50</td><td>5,90</td><td>6,40</td></tr>
-        <tr><td>čiapka, baret, šála</td><td>5,50</td><td>5,90</td><td>6,40</td></tr>
-        <tr><td>Záclona veľká, do 15m²</td><td>11,40</td><td>12,60</td><td>13,30</td></tr>
-      </tbody>
-    </table>
+  <!-- HLAVIČKA -->
+  <header class="page-header">
+    <div class="header-overlay">
+      <h1>Cenník</h1>
+      <p>Ceny v € – čistenie za 5 dní, 3 dni alebo expresne za 24 hodín</p>
+    </div>
+  </header>
 
-    <table>
-      <caption>Vybrané druhy textílií</caption>
-      <thead>
-        <tr>
-          <th>Položka</th>
-          <th>5 dní</th>
-          <th>3 dni</th>
-          <th>24 hod</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>spací vak, vesta kožuš.</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>paplón / vankúš</td><td>19,60 / 9,50</td><td>21,30 / 10,90</td><td>24,10 / 12,00</td></tr>
-        <tr><td>fusak &ndash; pravá kožušina</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>ovčie rúno - poduška</td><td>12,00</td><td>13,80</td><td>15,00</td></tr>
-        <tr><td>čiapka, límec &ndash; pravá kožušina</td><td>12,00</td><td>13,80</td><td>15,00</td></tr>
-        <tr><td>kožušinová predložka 1m²</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>koberec tkaný do 1m</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>deka dvojitá tenká</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>spoločenské šaty</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>šaty, 1. sv. prijímanie</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>vetrovka páperová</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>kožuch umelý, ornát</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>vetrovka hl. koža</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>vetrovka velúr - krátka</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
-        <tr><td>kožuch pravý s vlasom</td><td>29,60</td><td>34,00</td><td>neberieme</td></tr>
-        <tr><td>ovčie rúno - plachta</td><td>19,60</td><td>21,30</td><td>neberieme</td></tr>
-        <tr><td>ovčie rúno &ndash; prikrývka dvoj., deka hrubá</td><td>24,90</td><td>27,60</td><td>neberieme</td></tr>
-        <tr><td>šaty svad. exkluzívne</td><td>29,60</td><td>34,60</td><td>neberieme</td></tr>
-      </tbody>
-    </table>
+  <main class="container">
+    <div class="table-wrap">
+      <table class="price-table">
+        <caption>SORTIMENT</caption>
+        <thead><tr><th>Položka</th><th>5 dní</th><th>3 dni</th><th>24 hod</th></tr></thead>
+        <tbody>
+          <tr><td>kabát, plášť, paleto</td><td>12,90</td><td>14,20</td><td>15,00</td></tr>
+          <tr><td>vetrovka, zat. vesta pér.</td><td>12,90</td><td>14,20</td><td>15,00</td></tr>
+          <tr><td>Vetr. bez podšívky</td><td>11,40</td><td>12,60</td><td>13,30</td></tr>
+          <tr><td>Nohavice, sako, župan</td><td>9,80</td><td>10,50</td><td>10,90</td></tr>
+          <tr><td>sukňa krátka</td><td>8,50</td><td>9,20</td><td>9,80</td></tr>
+          <tr><td>šaty krátke</td><td>9,80</td><td>10,50</td><td>10,90</td></tr>
+          <tr><td>sveter, košeľa</td><td>6,00</td><td>6,90</td><td>7,20</td></tr>
+          <tr><td>vesta zateplená</td><td>11,40</td><td>12,60</td><td>13,30</td></tr>
+          <tr><td>overal, deka, noh. otep.</td><td>12,90</td><td>14,20</td><td>15,00</td></tr>
+          <tr><td>fusak - umelý</td><td>11,40</td><td>12,60</td><td>13,30</td></tr>
+          <tr><td>prac. blúza, noh.</td><td>7,00</td><td>8,10</td><td>8,90</td></tr>
+          <tr><td>Záclona, malá do 7m²</td><td>8,50</td><td>9,20</td><td>10,90</td></tr>
+          <tr><td>pracovný kabát</td><td>12,50</td><td>13,20</td><td>14,00</td></tr>
+          <tr><td>vesta obleková, top</td><td>8,50</td><td>8,80</td><td>9,20</td></tr>
+          <tr><td>viazanka</td><td>5,50</td><td>5,90</td><td>6,40</td></tr>
+          <tr><td>čiapka, baret, šála</td><td>5,50</td><td>5,90</td><td>6,40</td></tr>
+          <tr><td>Záclona veľká, do 15m²</td><td>11,40</td><td>12,60</td><td>13,30</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap">
+      <table class="price-table">
+        <caption>Vybrané druhy textílií</caption>
+        <thead><tr><th>Položka</th><th>5 dní</th><th>3 dni</th><th>24 hod</th></tr></thead>
+        <tbody>
+          <tr><td>spací vak, vesta kožuš.</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>paplón / vankúš</td><td>19,60 / 9,50</td><td>21,30 / 10,90</td><td>24,10 / 12,00</td></tr>
+          <tr><td>fusak &ndash; pravá kožušina</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>ovčie rúno - poduška</td><td>12,00</td><td>13,80</td><td>15,00</td></tr>
+          <tr><td>čiapka, límec &ndash; pravá kožušina</td><td>12,00</td><td>13,80</td><td>15,00</td></tr>
+          <tr><td>kožušinová predložka 1m²</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>koberec tkaný do 1m</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>deka dvojitá tenká</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>spoločenské šaty</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>šaty, 1. sv. prijímanie</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>vetrovka páperová</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>kožuch umelý, ornát</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>vetrovka hl. koža</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>vetrovka velúr - krátka</td><td>19,60</td><td>21,30</td><td>24,10</td></tr>
+          <tr><td>kožuch pravý s vlasom</td><td>29,60</td><td>34,00</td><td>neberieme</td></tr>
+          <tr><td>ovčie rúno - plachta</td><td>19,60</td><td>21,30</td><td>neberieme</td></tr>
+          <tr><td>ovčie rúno &ndash; prikrývka dvoj., deka hrubá</td><td>24,90</td><td>27,60</td><td>neberieme</td></tr>
+          <tr><td>šaty svad. exkluzívne</td><td>29,60</td><td>34,60</td><td>neberieme</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="note">
       <p><strong>Zľava:</strong> pre dôchodcov nad 70 r. a držiteľov preukazu ZŤP &ndash; 10 %</p>
       <p><strong>Legenda:</strong> SZ &ndash; silne znečistené, F &ndash; škvrny, C &ndash; obnosené, vydrané, poškodené</p>
-      <p><strong>Príplatok:</strong> čištenie do 8 hod. = cena za 24 hod + 50 %</p>
-      <p><strong>Cenník platný od:</strong> 01.01.2026 &nbsp;&nbsp; <strong>www.bluelanza.sk</strong></p>
+      <p><strong>Príplatok:</strong> čistenie do 8 hod. = cena za 24 hod + 50 %</p>
+      <p><strong>Cenník platný od:</strong> 01.01.2026</p>
     </div>
-    <p style="margin-top: 40px;">
-        <a href="index.html" style="color: #0066cc; font-weight: bold;">← Späť na hlavnú stránku</a>
-      </p>
+  </main>
+
+  <!-- PÄTIČKA (rovnaká na všetkých stránkach) -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Kontakt</h4>
+        <p>Štefánikova 21, 917 01 Trnava<br><span class="muted">Pasáž hotela MAX PLAZA, oproti Domu svetla</span></p>
+        <p><a href="tel:+421902254780">0902/254 780</a> <span class="muted">(prevádzka, do 16:00)</span><br><a href="tel:+421903427536">0903/427 536</a></p>
+      </div>
+      <div>
+        <h4>Otváracie hodiny</h4>
+        <div class="hours-table">
+          <div><span>Pondelok – Piatok</span><span>09:00 – 16:00</span></div>
+          <div><span>Sobota – Nedeľa</span><span>ZATVORENÉ</span></div>
+        </div>
+      </div>
+      <div>
+        <h4>Nájdete nás na Google</h4>
+        <a class="google-badge" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">
+          <span class="google-stars">★★★★★</span>
+          <span><strong>4,7</strong> hodnotenie zákazníkov</span>
+        </a>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">Navigovať k nám →</a></p>
+      </div>
     </div>
+  </footer>
+  <div class="site-credit">
+    <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
   </div>
+
+  <!-- TLAČIDLO ZAVOLAŤ (len na mobile) -->
+  <a class="call-button" href="tel:+421902254780" aria-label="Zavolať do čistiarne">📞 Zavolať</a>
+
 </body>
 </html>

@@ -4,77 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – Čistiareň Blue Lanza</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Kontakt na čistiareň Blue Lanza – Štefánikova 21, Trnava (pasáž hotela MAX PLAZA). Otvorené Po–Pi 9:00–16:00." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Top news -->
- <div class="top-news">
-        <div class="scrolling-text">
-          📢 <strong>Vítame vás na webstránke čistiarne blue Lanza</strong>
-        </div>
-    </div>
 
-  <!-- Navigácia -->
+  <!-- ŽLTÝ BEŽIACI PÁS -->
+  <div class="top-news">
+    <div class="scrolling-text">
+      📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
+    </div>
+  </div>
+
+  <!-- NAVIGÁCIA -->
   <nav>
-    <div class="logo">Čistiareň Blue Lanza</div>
+    <a class="logo" href="index.html">Čistiareň Blue Lanza</a>
     <div class="nav-links">
       <a href="index.html">Hlavná stránka</a>
+      <a href="o-nas.html">O nás</a>
       <a href="cennik.html">Cenník</a>
       <a href="zlavy.html">Zľavy</a>
       <a href="sluzby.html">Služby</a>
       <a href="zaujimavosti.html">Zaujímavosti</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
     </div>
   </nav>
 
-  <!-- Header s pozadím a textom -->
-  <header class="page-header header-kontakt">
+  <!-- HLAVIČKA -->
+  <header class="page-header">
     <div class="header-overlay">
       <h1>Kontakt</h1>
       <p>Všetko čo o nás potrebujete vedieť a kde nás nájdete</p>
     </div>
   </header>
-  
 
-  <!-- Obsah -->
   <main class="container">
-    <h2>Čistiareň šatstva</h2>
-    <p><strong>BLUE LANZA – Darina Záhorcová</strong></p>
-    <p><strong>Sídlo:</strong> Hospodárska 3618/85, Trnava</p>
-    <p><strong>OÚ Trnava, Živn. register č.:</strong> 207 6965</p>
-    <p><strong>IČO:</strong> 176 729 11</p>
-    <p><strong>Telefón:</strong> 0903/427 536</p>
+    <div class="contact-actions">
+      <a class="btn" href="tel:+421902254780">📞 Zavolať</a>
+      <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">📍 Navigovať</a>
+    </div>
 
-    <h2>Prevádzka</h2>
-    <p><strong>Adresa:</strong> Štefánikova 21, Trnava</p>
-    <p><em>(Pasáž hotela MAX PLAZA, oproti Domu svetla)</em></p>
-    <p><strong>Telefón:</strong> 0902/254 780 <em>(dostupný do 16:00)</em></p>
+    <div class="contact-grid">
+      <div class="card contact-card">
+        <h2>Prevádzka</h2>
+        <p><strong>Adresa:</strong> Štefánikova 21, Trnava</p>
+        <p><em>(Pasáž hotela MAX PLAZA, oproti Domu svetla)</em></p>
+        <p><strong>Telefón:</strong> <a href="tel:+421902254780">0902/254 780</a> <em>(dostupný do 16:00)</em></p>
+        <h3>Otváracie hodiny</h3>
+        <ul>
+          <li>Pondelok – Piatok: 09:00 – 16:00</li>
+          <li>Sobota – Nedeľa: ZATVORENÉ</li>
+        </ul>
+      </div>
+      <div class="card contact-card">
+        <h2>Čistiareň šatstva</h2>
+        <p><strong>BLUE LANZA – Darina Záhorcová</strong></p>
+        <p><strong>Sídlo:</strong> Hospodárska 3618/85, Trnava</p>
+        <p><strong>OÚ Trnava, Živn. register č.:</strong> 207 6965</p>
+        <p><strong>IČO:</strong> 176 729 11</p>
+      </div>
+    </div>
 
-    <h2>Otváracie hodiny</h2>
-    <ul>
-      <li>Pondelok – Piatok: 09:00 – 16:00</li>
-      <li>Sobota – Nedeľa: ZATVORENÉ</li>
-    </ul>
-
-    <h2>Kde nás nájdete</h2>
+    <h2 class="section-title">Kde nás nájdete</h2>
     <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2666.7471076269736!2d17.593746415742493!3d48.37711947924207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8b7587a78e19%3A0x86b64e4106df40a7!2s%C5%A0tef%C3%A1nikova%2021%2C%20917%2001%20Trnava!5e0!3m2!1ssk!2ssk!4v1652956512345" 
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2666.7471076269736!2d17.593746415742493!3d48.37711947924207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8b7587a78e19%3A0x86b64e4106df40a7!2s%C5%A0tef%C3%A1nikova%2021%2C%20917%2001%20Trnava!5e0!3m2!1ssk!2ssk!4v1652956512345"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa – Štefánikova 21, Trnava">
       </iframe>
     </div>
   </main>
-  <p style="margin-top: 40px;">
-    <a href="index.html" style="color: #0066cc; font-weight: bold;">← Späť na hlavnú stránku</a>
-  </p>
-  <!-- Footer -->
+
+  <!-- PÄTIČKA (rovnaká na všetkých stránkach) -->
   <footer>
-    <p><strong>Adresa:</strong> Štefánikova 21, 91701 Trnava</p>
-    <p><strong>Tel. č.:</strong> 0902/254 780 <span>(prevádzka, do 16:00)</span> · 0903/427 536</p>
-    <div class="site-credit">
-      <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
+    <div class="footer-grid">
+      <div>
+        <h4>Kontakt</h4>
+        <p>Štefánikova 21, 917 01 Trnava<br><span class="muted">Pasáž hotela MAX PLAZA, oproti Domu svetla</span></p>
+        <p><a href="tel:+421902254780">0902/254 780</a> <span class="muted">(prevádzka, do 16:00)</span><br><a href="tel:+421903427536">0903/427 536</a></p>
+      </div>
+      <div>
+        <h4>Otváracie hodiny</h4>
+        <div class="hours-table">
+          <div><span>Pondelok – Piatok</span><span>09:00 – 16:00</span></div>
+          <div><span>Sobota – Nedeľa</span><span>ZATVORENÉ</span></div>
+        </div>
+      </div>
+      <div>
+        <h4>Nájdete nás na Google</h4>
+        <a class="google-badge" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">
+          <span class="google-stars">★★★★★</span>
+          <span><strong>4,7</strong> hodnotenie zákazníkov</span>
+        </a>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">Navigovať k nám →</a></p>
+      </div>
     </div>
   </footer>
+  <div class="site-credit">
+    <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
+  </div>
+
+  <!-- TLAČIDLO ZAVOLAŤ (len na mobile) -->
+  <a class="call-button" href="tel:+421902254780" aria-label="Zavolať do čistiarne">📞 Zavolať</a>
+
 </body>
 </html>

@@ -4,63 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Služby – Čistiareň Blue Lanza</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Služby čistiarne Blue Lanza v Trnave: chemické čistenie, pranie a žehlenie košieľ, záclon, paplónov a ďalšie." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Top news -->
- <div class="top-news">
-        <div class="scrolling-text">
-          📢 <strong>Vítame vás na webstránke čistiarne blue Lanza</strong>
-        </div>
+  <!-- ŽLTÝ BEŽIACI PÁS -->
+  <div class="top-news">
+    <div class="scrolling-text">
+      📢 <strong>Vítame vás na webstránke čistiarne Blue Lanza</strong>
     </div>
+  </div>
 
-  <!-- Navigácia -->
+  <!-- NAVIGÁCIA -->
   <nav>
-    <div class="logo">Čistiareň Blue Lanza</div>
+    <a class="logo" href="index.html">Čistiareň Blue Lanza</a>
     <div class="nav-links">
       <a href="index.html">Hlavná stránka</a>
+      <a href="o-nas.html">O nás</a>
       <a href="cennik.html">Cenník</a>
       <a href="zlavy.html">Zľavy</a>
-        <a href="sluzby.html">Služby</a>
+      <a href="sluzby.html" class="active">Služby</a>
       <a href="zaujimavosti.html">Zaujímavosti</a>
       <a href="kontakt.html">Kontakt</a>
     </div>
   </nav>
 
-  <!-- Header -->
+  <!-- HLAVIČKA -->
   <header class="page-header">
     <div class="header-overlay">
-      <h1>Služby</h1>
-      <p>Kompletná starostlivosť o vaše odevy a textil</p>
+      <h1>Naše služby</h1>
+      <p>Postaráme sa o vaše oblečenie aj bytový textil</p>
     </div>
   </header>
 
-  <!-- Obsah -->
-  <main class="container" style="max-width: 800px; margin: 50px auto; padding: 0 20px;">
-    <ul style="list-style: disc; padding-left: 20px; font-size: 1.05rem; line-height: 1.8;">
-      <li>Chemické čistenie šatstva</li>
-      <li>Pranie a žehlenie košieľ</li>
-      <li>Odžmolkovanie odevov</li>
-      <li>Pranie záclon</li>
-      <li>Pranie paplónov</li>
-      <li>Pranie osobnej bielizne pre klientov ubytovní a hotelov</li>
-      <li>Žehlenie doma opranej bielizne</li>
-      <li>Pranie a žehlenie pre ambulancie a lekárne</li>
-    </ul>
+  <main class="container">
+    <div class="cards">
+      <div class="card"><div class="card-icon">🧥</div><h3>Chemické čistenie šatstva</h3></div>
+      <div class="card"><div class="card-icon">👔</div><h3>Pranie a žehlenie košieľ</h3></div>
+      <div class="card"><div class="card-icon">🧶</div><h3>Odžmolkovanie odevov</h3></div>
+      <div class="card"><div class="card-icon">🪟</div><h3>Pranie záclon</h3></div>
+      <div class="card"><div class="card-icon">🛏️</div><h3>Pranie paplónov</h3></div>
+      <div class="card"><div class="card-icon">🏨</div><h3>Pranie osobnej bielizne pre klientov ubytovní a hotelov</h3></div>
+      <div class="card"><div class="card-icon">♨️</div><h3>Žehlenie doma opranej bielizne</h3></div>
+      <div class="card"><div class="card-icon">🏥</div><h3>Pranie a žehlenie pre ambulancie a lekárne</h3></div>
+    </div>
+    <p class="center"><a class="btn" href="cennik.html">Pozrieť cenník</a></p>
   </main>
-  <p style="margin-top: 40px;">
-    <a href="index.html" style="color: #0066cc; font-weight: bold;">← Späť na hlavnú stránku</a>
-  </p>
-  <!-- Footer -->
+
+  <!-- PÄTIČKA (rovnaká na všetkých stránkach) -->
   <footer>
-    <p><strong>Adresa:</strong> Štefánikova 21, 91701 Trnava</p>
-    <p><strong>Tel. č.:</strong> 0902/254 780 <span>(prevádzka, do 16:00)</span> · 0903/427 536</p>
-    <div class="site-credit">
-      <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
+    <div class="footer-grid">
+      <div>
+        <h4>Kontakt</h4>
+        <p>Štefánikova 21, 917 01 Trnava<br><span class="muted">Pasáž hotela MAX PLAZA, oproti Domu svetla</span></p>
+        <p><a href="tel:+421902254780">0902/254 780</a> <span class="muted">(prevádzka, do 16:00)</span><br><a href="tel:+421903427536">0903/427 536</a></p>
+      </div>
+      <div>
+        <h4>Otváracie hodiny</h4>
+        <div class="hours-table">
+          <div><span>Pondelok – Piatok</span><span>09:00 – 16:00</span></div>
+          <div><span>Sobota – Nedeľa</span><span>ZATVORENÉ</span></div>
+        </div>
+      </div>
+      <div>
+        <h4>Nájdete nás na Google</h4>
+        <a class="google-badge" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">
+          <span class="google-stars">★★★★★</span>
+          <span><strong>4,7</strong> hodnotenie zákazníkov</span>
+        </a>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Lanza%20%C4%8Distiare%C5%88%20Trnava" target="_blank" rel="noopener">Navigovať k nám →</a></p>
+      </div>
     </div>
   </footer>
+  <div class="site-credit">
+    <p>Webstránku vytvoril <strong>Marek Záhorec</strong> © 2025</p>
+  </div>
+
+  <!-- TLAČIDLO ZAVOLAŤ (len na mobile) -->
+  <a class="call-button" href="tel:+421902254780" aria-label="Zavolať do čistiarne">📞 Zavolať</a>
 
 </body>
 </html>
